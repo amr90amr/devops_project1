@@ -1,0 +1,7 @@
+FROM httpd
+LABEL welcome to custom app
+ENV APP_VERSION=1.0.0 APP_SECTION=SALES APP_NAME=WEBAPP
+ENV var1=123 var2=hello
+RUN apt update
+RUN apt install vim -y
+COPY . /usr/local/apache2/htdocs
